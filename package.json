@@ -1,0 +1,10 @@
+{
+	"name": "test-mong",
+	"description" : "A Test mongoose application.",
+	"version" : "0.0.1",
+	"author" : "Josh Holt <josh.holt@eloqua.com>",
+	"private" : true,
+	"dependencies" : {
+		"mongoose" : "*"
+	}
+}

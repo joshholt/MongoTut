@@ -1,6 +1,7 @@
-mongoose = require 'mongoose'
+mongoose	= require 'mongoose'
+Schema    = mongoose.Schema
 
-personSchema = new mongoose.Schema
+personSchema = new Schema
 	first_name: String
 	last_name:  String
 	email:			String

@@ -1,9 +1,11 @@
 (function() {
-  var Person, mongoose, personSchema;
+  var Person, Schema, mongoose, personSchema;
 
   mongoose = require('mongoose');
 
-  personSchema = new mongoose.Schema({
+  Schema = mongoose.Schema;
+
+  personSchema = new Schema({
     first_name: String,
     last_name: String,
     email: String

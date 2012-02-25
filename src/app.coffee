@@ -26,7 +26,6 @@ add_person = (person) ->
     if counter >= people.length
       models.Person.find {}, print_people
 
-
 display_doc = (doc) ->
   console.log "********************************************************************************"
   console.log "#{doc.first_name} #{doc.last_name}"
@@ -38,14 +37,13 @@ print_people = (err, docs) ->
   console.log "Done..."
   mongoose.disconnect()
 
-insert_people = ->
-  add_person person for person in people
-  console.log "Inserted People..."
+insert_people = -> add_person person for person in people
 
 models.Person.find {}, (err, docs) ->
   return console.log err if err
   if docs && docs.length <= 0
     console.log "About to insert_people..."
     insert_people()
+    console.log "Inserted People..."
   else
     print_people err, docs
